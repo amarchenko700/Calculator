@@ -10,4 +10,5 @@
     <color name="btns_memory">#4CB1FF</color>
     <color name="btns_functions">#001EE1</color>
     <color name="btns_numbers">#FF9800</color>
+    <color name="text_memory">#04C4F4</color>
 </resources>

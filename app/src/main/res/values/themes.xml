@@ -36,4 +36,20 @@
         <item name="backgroundTint">@color/btns_functions</item>
     </style>
 
+    <style name="text_memory">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/size_memory_string</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/text_memory</item>
+        <item name="android:text">"M"</item>
+    </style>
+
+    <style name="text_expression_string" parent="text_memory">
+        <item name="android:textSize">@dimen/size_expression_string</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">""</item>
+    </style>
+
 </resources>
