@@ -1,4 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <!-- Base application theme. -->
     <style name="Theme.Calculator" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
@@ -13,4 +15,25 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="btns_calc">
+        <item name="android:layout_width">@dimen/btn_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/btn_layout_margin</item>
+        <item name="cornerRadius">@dimen/corner_radius</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="buttons_numbers" parent="btns_calc">
+        <item name="backgroundTint">@color/btns_numbers</item>
+    </style>
+
+    <style name="buttons_memory" parent="btns_calc">
+        <item name="backgroundTint">@color/btns_memory</item>
+    </style>
+
+    <style name="buttons_function" parent="btns_calc">
+        <item name="backgroundTint">@color/btns_functions</item>
+    </style>
+
 </resources>
