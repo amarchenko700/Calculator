@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="key_1">1</string>
+    <string name="key_2">2</string>
+    <string name="key_3">3</string>
+    <string name="key_4">4</string>
+    <string name="key_5">5</string>
+    <string name="key_6">6</string>
+    <string name="key_7">7</string>
+    <string name="key_8">8</string>
+    <string name="key_9">9</string>
+    <string name="key_0">0</string>
+    <string name="key_dot">.</string>
+    <string name="MC">MC</string>
+    <string name="MR">MR</string>
+    <string name="MDesc">M-</string>
+    <string name="MAsc">M+</string>
+    <string name="MS">MS</string>
+    <string name="key_inverting">+/-</string>
+    <string name="key_multiplication">*</string>
+    <string name="key_subtraction">-</string>
+    <string name="key_addition">+</string>
+    <string name="key_equally">=</string>
+    <string name="key_percent">%</string>
+    <string name="key_CE">CE</string>
+    <string name="key_C">C</string>
+    <string name="key_delete">del</string>
+    <string name="key_division">/</string>
+    <string name="key_bracket_start">(</string>
+    <string name="key_bracket_end">)</string>
 </resources>
