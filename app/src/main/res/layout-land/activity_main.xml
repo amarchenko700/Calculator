@@ -7,11 +7,11 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textMemory"
+        android:id="@+id/text_memory"
         style="@style/text_memory"></TextView>
 
     <TextView
-        android:id="@+id/expressionString"
+        android:id="@+id/expression_string"
         style="@style/text_expression_string"></TextView>
 
     <GridLayout
