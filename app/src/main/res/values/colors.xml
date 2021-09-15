@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="memory_buttons">#4CB1FF</color>
+    <color name="function_buttons">#001EE1</color>
+    <color name="number_buttons">#FF9800</color>
+    <color name="text_memory_textview">#04C4F4</color>
 </resources>

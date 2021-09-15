@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_backgroundcalc2"
+    android:background="@drawable/calcbackground"
     android:gravity="center_vertical|center_horizontal"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/text_memory_textview"
-        style="@style/text_memory_textview" />
+        style="@style/text_memory_textview"/>
 
     <TextView
         android:id="@+id/expression_string_textview"
@@ -17,7 +17,7 @@
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:columnCount="4">
+        android:columnCount="6">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/memory_clear_button"
@@ -52,9 +52,40 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/delete_button"
             style="@style/function_buttons"
-            android:layout_columnSpan="2"
             android:layout_gravity="fill_horizontal"
             android:text="@string/delete_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/equally_button"
+            style="@style/function_buttons"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"
+            android:text="@string/equally_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dot_button"
+            style="@style/number_buttons"
+            android:text="@string/dot_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/multiplication_button"
+            style="@style/function_buttons"
+            android:text="@string/multiplication_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/division_button"
+            style="@style/function_buttons"
+            android:text="@string/division_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/number_5_button"
+            style="@style/number_buttons"
+            android:text="@string/number_5_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/number_6_button"
+            style="@style/number_buttons"
+            android:text="@string/number_6_button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/number_7_button"
@@ -72,29 +103,14 @@
             android:text="@string/number_9_button" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/multiplication_button"
+            android:id="@+id/addition_button"
             style="@style/function_buttons"
-            android:text="@string/multiplication_button" />
+            android:text="@string/addition_button" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/number_4_button"
+            android:id="@+id/number_0_button"
             style="@style/number_buttons"
-            android:text="@string/number_4_button" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/number_5_button"
-            style="@style/number_buttons"
-            android:text="@string/number_5_button" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/number_6_button"
-            style="@style/number_buttons"
-            android:text="@string/number_6_button" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/division_button"
-            style="@style/function_buttons"
-            android:text="@string/division_button" />
+            android:text="@string/number_0_button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/number_1_button"
@@ -109,27 +125,12 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/number_3_button"
             style="@style/number_buttons"
-            android:text="@string/number_2_button" />
+            android:text="@string/number_3_button" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/addition_button"
-            style="@style/function_buttons"
-            android:text="@string/addition_button" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/number_0_button"
+            android:id="@+id/number_4_button"
             style="@style/number_buttons"
-            android:text="@string/number_0_button" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/dot_button"
-            style="@style/number_buttons"
-            android:text="@string/dot_button" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/equally_button"
-            style="@style/function_buttons"
-            android:text="@string/equally_button" />
+            android:text="@string/number_4_button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/subtraction_button"
