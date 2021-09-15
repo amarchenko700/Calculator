@@ -16,40 +16,39 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="btns_calc">
-        <item name="android:layout_width">@dimen/btn_width</item>
+    <style name="calculator_buttons">
+        <item name="android:layout_width">@dimen/calculator_buttons_width</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">@dimen/btn_layout_margin</item>
-        <item name="cornerRadius">@dimen/corner_radius</item>
+        <item name="android:layout_margin">@dimen/calculator_buttons_layout_margin</item>
+        <item name="cornerRadius">@dimen/calculator_buttons_corner_radius</item>
         <item name="android:textAlignment">center</item>
     </style>
 
-    <style name="buttons_numbers" parent="btns_calc">
-        <item name="backgroundTint">@color/btns_numbers</item>
+    <style name="number_buttons" parent="calculator_buttons">
+        <item name="backgroundTint">@color/number_buttons</item>
     </style>
 
-    <style name="buttons_memory" parent="btns_calc">
-        <item name="backgroundTint">@color/btns_memory</item>
+    <style name="memory_buttons" parent="calculator_buttons">
+        <item name="backgroundTint">@color/memory_buttons</item>
     </style>
 
-    <style name="buttons_function" parent="btns_calc">
-        <item name="backgroundTint">@color/btns_functions</item>
+    <style name="function_buttons" parent="calculator_buttons">
+        <item name="backgroundTint">@color/function_buttons</item>
     </style>
 
-    <style name="text_memory">
+    <style name="text_memory_textview">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">@dimen/size_memory_string</item>
+        <item name="android:textSize">@dimen/text_memory_textview_text_size</item>
         <item name="android:gravity">start</item>
-        <item name="android:textColor">@color/text_memory</item>
-        <item name="android:text">"M"</item>
+        <item name="android:textColor">@color/text_memory_textview</item>
+        <item name="android:text">@string/text_memory_textview</item>
     </style>
 
-    <style name="text_expression_string" parent="text_memory">
-        <item name="android:textSize">@dimen/size_expression_string</item>
+    <style name="expression_string_textview" parent="text_memory_textview">
+        <item name="android:textSize">@dimen/expression_string_textview_text_size</item>
         <item name="android:gravity">center</item>
-        <item name="android:text">""</item>
+        <item name="android:text">@string/expression_string_textview</item>
     </style>
-
 </resources>
