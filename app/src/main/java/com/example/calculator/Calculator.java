@@ -8,7 +8,11 @@ public class Calculator implements Parcelable {
     private String expressionString;
     private Float memoryValue = 0f;
 
+    public Calculator(){
 
+    }
+
+    // region Parcelable_metod
     protected Calculator(Parcel in) {
         expressionString = in.readString();
         if (in.readByte() == 0) {
@@ -45,4 +49,14 @@ public class Calculator implements Parcelable {
             dest.writeFloat(memoryValue);
         }
     }
+    // endregion
+
+    public Float getMemoryValue() {
+        return memoryValue;
+    }
+
+    public String getExpressionString() {
+        return expressionString;
+    }
+
 }
