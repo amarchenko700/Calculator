@@ -8,11 +8,11 @@
 
     <TextView
         android:id="@+id/text_memory_textview"
-        style="@style/text_memory_textview"></TextView>
+        style="@style/text_memory_textview" />
 
     <TextView
         android:id="@+id/expression_string_textview"
-        style="@style/expression_string_textview"></TextView>
+        style="@style/expression_string_textview"/>
 
     <GridLayout
         android:layout_width="wrap_content"
