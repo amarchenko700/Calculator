@@ -11,4 +11,5 @@
     <color name="function_buttons">#001EE1</color>
     <color name="number_buttons">#FF9800</color>
     <color name="text_memory_textview">#04C4F4</color>
+    <color name="expression_textview">#113EE4</color>
 </resources>
