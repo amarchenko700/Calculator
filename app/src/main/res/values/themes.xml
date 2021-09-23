@@ -52,4 +52,10 @@
         <item name="android:text">@string/expression_string_textview</item>
         <item name="android:textColor">@color/expression_textview</item>
     </style>
+
+    <style name="Theme.Summer" parent="Theme.Calculator">
+        <item name="colorPrimary">@color/summerColorPrimary</item>
+        <item name="backgroundTint">@color/summer_memory_buttons</item>
+    </style>
+
 </resources>
