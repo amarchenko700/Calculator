@@ -50,23 +50,32 @@ public class MainActivity extends AppCompatActivity {
 
         CalcButtonListener calcButtonListener = new CalcButtonListener(calculator);
 
+        setupClickListenersMemoryButtons(calcButtonListener);
+        setupClickListenersFunctionButtons(calcButtonListener);
+        setupClickListenersNumberButtons(calcButtonListener);
+
+    }
+
+    private void setupClickListenersMemoryButtons(CalcButtonListener calcButtonListener){
         setClickListenerOnButton(R.id.memory_clear_button, calcButtonListener);
         setClickListenerOnButton(R.id.memory_read_button, calcButtonListener);
         setClickListenerOnButton(R.id.memory_addition_button, calcButtonListener);
         setClickListenerOnButton(R.id.memory_subtraction_button, calcButtonListener);
+    }
 
+    private void setupClickListenersFunctionButtons(CalcButtonListener calcButtonListener){
         setClickListenerOnButton(R.id.clear_entry_button, calcButtonListener);
         setClickListenerOnButton(R.id.clear_button, calcButtonListener);
         setClickListenerOnButton(R.id.delete_button, calcButtonListener);
-
         setClickListenerOnButton(R.id.equally_button, calcButtonListener);
         setClickListenerOnButton(R.id.dot_button, calcButtonListener);
-
         setClickListenerOnButton(R.id.addition_button, calcButtonListener);
         setClickListenerOnButton(R.id.subtraction_button, calcButtonListener);
         setClickListenerOnButton(R.id.multiplication_button, calcButtonListener);
         setClickListenerOnButton(R.id.division_button, calcButtonListener);
+    }
 
+    private void setupClickListenersNumberButtons(CalcButtonListener calcButtonListener){
         for (int numberOperationId : arrayCalculatorButtonId) {
             findViewById(numberOperationId).setOnClickListener(v -> {
                 Button calculatorButton = (Button) v;
@@ -74,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
                 expression_string_textview.setText(calculator.getExpressionString());
             });
         }
-
     }
 
     private void setClickListenerOnButton(int idView, CalcButtonListener calcButtonListener) {
