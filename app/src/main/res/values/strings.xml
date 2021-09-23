@@ -25,4 +25,8 @@
     <string name="clear_button">C</string>
     <string name="delete_button">del</string>
     <string name="division_button">/</string>
+    <string name="theme_summer_text">Лето</string>
+    <string name="theme_default_text">По умолчанию</string>
+    <string name="settings_button_text">Выбрать тему</string>
+    <string name="choose_theme_text_button">Выбрать тему</string>
 </resources>
