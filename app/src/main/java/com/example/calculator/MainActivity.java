@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             calculator = new Calculator();
         } else {
-            calculator = (Calculator) savedInstanceState.getSerializable(OBJECT_CALCULATOR);
+            calculator = savedInstanceState.getParcelable(OBJECT_CALCULATOR);
             expression_string_textview.setText(calculator.getExpressionString());
         }
 
@@ -169,6 +169,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putSerializable(OBJECT_CALCULATOR, calculator);
+        outState.putParcelable(OBJECT_CALCULATOR, calculator);
     }
 }

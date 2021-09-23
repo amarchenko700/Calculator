@@ -1,10 +1,13 @@
 package com.example.calculator;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.io.Serializable;
 
 import MathOperations.*;
 
-public class Calculator implements Serializable {
+public class Calculator implements Parcelable {
 
     private String expressionString;
     private Float memoryValue;
@@ -108,4 +111,13 @@ public class Calculator implements Serializable {
         return expressionString;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+
+    }
 }
