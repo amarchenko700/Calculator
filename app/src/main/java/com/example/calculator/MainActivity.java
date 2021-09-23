@@ -1,8 +1,19 @@
 package com.example.calculator;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityOptionsCompat;
 
+import android.app.Activity;
+import android.app.Instrumentation;
+import android.content.Intent;
+import android.media.audiofx.BassBoost;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,8 +22,10 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private static final String OBJECT_CALCULATOR = "OBJECT_CALCULATOR";
+    public static final String THEME_INDEX = "THEME_INDEX";
     private TextView expression_string_textview, text_memory_textview;
     private Calculator calculator;
+    private int themeIndex = 0;
 
     private final int[] arrayCalculatorButtonId = new int[]{R.id.number_0_button, R.id.number_1_button,
             R.id.number_2_button, R.id.number_3_button, R.id.number_4_button, R.id.number_5_button,
@@ -21,17 +34,42 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        expression_string_textview = findViewById(R.id.expression_string_textview);
-        text_memory_textview = findViewById(R.id.text_memory_textview);
 
         if (savedInstanceState == null) {
             calculator = new Calculator();
         } else {
             calculator = savedInstanceState.getParcelable(OBJECT_CALCULATOR);
-            expression_string_textview.setText(calculator.getExpressionString());
+            themeIndex = savedInstanceState.getInt(THEME_INDEX);
         }
+
+        if(themeIndex == 0){
+            setTheme(R.style.Theme_Calculator);
+        }else if(themeIndex == 1){
+            setTheme(R.style.SummerTheme);
+        }
+        setContentView(R.layout.activity_main);
+
+        ActivityResultLauncher<Intent> launcherSettings = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult result) {
+                if(result.getResultCode() == Activity.RESULT_OK){
+                    if(result.getData() != null){
+                        themeIndex = result.getData().getIntExtra(THEME_INDEX, themeIndex);
+                        recreate();
+                    }
+                }
+            }
+        });
+
+        findViewById(R.id.settings_button).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            intent.putExtra(THEME_INDEX, themeIndex);
+            launcherSettings.launch(intent);
+        });
+
+        expression_string_textview = findViewById(R.id.expression_string_textview);
+        text_memory_textview = findViewById(R.id.text_memory_textview);
+        expression_string_textview.setText(calculator.getExpressionString());
 
         setVisibleTextMemory();
         setClickListeners(calculator);
@@ -178,5 +216,6 @@ public class MainActivity extends AppCompatActivity {
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putParcelable(OBJECT_CALCULATOR, calculator);
+        outState.putInt(THEME_INDEX, themeIndex);
     }
 }
