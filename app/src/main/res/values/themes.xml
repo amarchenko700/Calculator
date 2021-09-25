@@ -35,7 +35,6 @@
     <style name="settings">
         <item name="android:layout_width">@dimen/settings_image_width</item>
         <item name="android:layout_height">@dimen/settings_image_height</item>
-        <item name="srcCompat">@drawable/settings_calc</item>
         <item name="android:layout_gravity">top|end</item>
     </style>
 
