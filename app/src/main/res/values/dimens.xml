@@ -5,4 +5,9 @@
     <dimen name="expression_string_textview_text_size">40sp</dimen>
     <dimen name="text_memory_textview_text_size">30sp</dimen>
     <dimen name="calculator_buttons_corner_radius">23dp</dimen>
+    <dimen name="choose_sheme_padding_start">50dp</dimen>
+    <dimen name="choose_theme_padding_top">150dp</dimen>
+    <dimen name="choose_theme_radio_button_size_text">32sp</dimen>
+    <dimen name="settings_image_width">50dp</dimen>
+    <dimen name="settings_image_height">50dp</dimen>
 </resources>

@@ -32,6 +32,12 @@
         <item name="backgroundTint">@color/memory_buttons</item>
     </style>
 
+    <style name="settings">
+        <item name="android:layout_width">@dimen/settings_image_width</item>
+        <item name="android:layout_height">@dimen/settings_image_height</item>
+        <item name="android:layout_gravity">top|end</item>
+    </style>
+
     <style name="function_buttons" parent="calculator_buttons">
         <item name="backgroundTint">@color/function_buttons</item>
     </style>
@@ -52,4 +58,14 @@
         <item name="android:text">@string/expression_string_textview</item>
         <item name="android:textColor">@color/expression_textview</item>
     </style>
+
+    <style name="SummerTheme" parent="Theme.Calculator">
+        <item name="colorPrimary">@color/summerColorPrimary</item>
+        <item name="backgroundTint">@color/summer_memory_buttons</item>
+    </style>
+
+    <style name="choose_Theme_Radio_Button">
+        <item name="android:textSize">@dimen/choose_theme_radio_button_size_text</item>
+    </style>
+
 </resources>

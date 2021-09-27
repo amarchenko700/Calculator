@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/choose_sheme_padding_start"
+    android:paddingTop="@dimen/choose_theme_padding_top">
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <RadioButton
+            android:id="@+id/radio_button_default"
+            style="@style/choose_Theme_Radio_Button"
+            android:text="@string/theme_default_text">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/radio_button_summer"
+            style="@style/choose_Theme_Radio_Button"
+            android:text="@string/theme_summer_text">
+        </RadioButton>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/choose_text_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_theme_text_button">
+
+    </Button>
+
+</LinearLayout>
